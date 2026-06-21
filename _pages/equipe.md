@@ -13,7 +13,7 @@ Conheça os membros do nosso laboratório.
     {% for member in professores %}
     <div class="team-card">
       <div class="team-card-photo">
-        <img src="{{ member.header.teaser }}" alt="{{ member.title }}">
+        <img src="{{ member.header.teaser | relative_url}}" alt="{{ member.title }}">
       </div>
       <div class="team-card-info">
         <h3><a href="{{ member.lattes_url }}" target="_blank">{{ member.title }}</a></h3>
@@ -32,7 +32,7 @@ Conheça os membros do nosso laboratório.
     {% for member in estudantes %}
     <div class="team-card">
       <div class="team-card-photo">
-        <img src="{{ member.header.teaser }}" alt="{{ member.title }}">
+        <img src="{{ member.header.teaser | relative_url}}" alt="{{ member.title }}">
       </div>
       <div class="team-card-info">
         <h3><a href="{{ member.lattes_url }}" target="_blank">{{ member.title }}</a></h3>
