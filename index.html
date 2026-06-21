@@ -2,3 +2,37 @@
 layout: home
 author_profile: false
 ---
+
+<div class="latest-news-section" style="margin-top: 2em; padding: 1.5em; background-color: #f9f9f9; border-radius: 4px; border-left: 4px solid #33a6cc;">
+  <h2 style="margin-top: 0;">📢 Últimas Notícias</h2>
+  
+  {% for post in site.posts limit:1 %}
+    <div class="news-preview-card" style="display: table; width: 100%; margin-bottom: 1em;">
+      
+      {% if post.header.teaser %}
+      <div style="display: table-cell; width: 25%; vertical-align: top; padding-right: 15px;">
+        <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" style="width: 100%; border-radius: 4px; object-fit: cover;">
+      </div>
+      {% endif %}
+      
+      <div style="display: table-cell; vertical-align: top;">
+        <h3 style="margin: 0 0 0.5em 0;">
+          <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #222;">{{ post.title }}</a>
+        </h3>
+        <p style="margin: 0 0 1em 0; color: #555; font-size: 0.95em;">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="btn btn--primary" style="padding: 0.4em 0.8em; font-size: 0.85em; text-decoration: none;">Ler Notícia Completa</a>
+      </div>
+      
+    </div>
+  {% else %}
+    <p>Nenhuma notícia publicada de momento.</p>
+  {% endfor %}
+
+  <div style="margin-top: 1.5em; border-top: 1px solid #e5e5e5; padding-top: 1em; text-align: right;">
+    <a href="{{ '/noticias/' | relative_url }}" style="font-weight: bold; text-decoration: none; color: #33a6cc;">
+      Ver todas as notícias antigo →
+    </a>
+  </div>
+</div>
