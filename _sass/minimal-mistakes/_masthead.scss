@@ -1,8 +1,15 @@
 .masthead {
   position: relative;
-  border-bottom: none !important; /* Remove explicitamente a linha reta do tema */
-  background-color: transparent; /* Garante que o bloco exterior é invisível */
-  padding: 1.5em 1em; /* Espaço para afastar a barra do topo e das laterais */
+  background-color: #fff !important;
+  
+  /* O Segredo da Barra Flutuante */
+  border: 1px solid #000 !important; /* Borda contornando tudo */
+  border-radius: 12px !important; /* Cantos arredondados modernos */
+  margin: 1.5em auto !important; /* Descola do topo e das bordas */
+  width: 92% !important; /* Mantém um respiro lateral nos telemóveis */
+  max-width: 1200px !important; /* Largura máxima em ecrãs grandes */
+  box-shadow: none !important; /* Remove qualquer sombra reta do tema */
+
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -12,25 +19,12 @@
   &__inner-wrap {
     @include clearfix;
     margin: 0 auto;
-    padding: 1em 1.5em;
-    max-width: 1200px;
-    
-    /* Aplicação do design flutuante apenas no contentor interno */
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 12px; 
-
-    display: -webkit-box;
-    display: -ms-flexbox;
+    padding: 1em 1.5em; /* Respiro interno para o texto não colar nas bordas */
+    max-width: 100%;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
+    align-items: center; /* Centraliza a logo e o texto verticalmente */
     font-family: $sans-serif-narrow;
-
-    @include breakpoint($x-large) {
-      max-width: $max-width;
-    }
 
     nav {
       z-index: 10;
@@ -47,10 +41,7 @@
 }
 
 .site-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
   text-transform: uppercase;
