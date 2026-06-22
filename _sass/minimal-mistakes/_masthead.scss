@@ -1,11 +1,11 @@
-/* ==========================================================================
-   MASTHEAD
-   ========================================================================== */
-
 .masthead {
   position: relative;
-  border-bottom: 1px solid #000; /* Linha preta fina */
-  background-color: #fff; /* Fundo branco garantido */
+  border: 1px solid #000; /* Borda fina contornando toda a barra */
+  border-radius: 12px; /* O arredondamento moderno dos cantos */
+  background-color: #fff;
+  margin: 1.5em auto; /* Descola a barra do topo da página e centraliza */
+  max-width: 1200px; /* Define o tamanho máximo para parecer um "cartão" */
+  width: 92%; /* Garante que há espaço vazio nas laterais em telemóveis */
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -15,7 +15,7 @@
   &__inner-wrap {
     @include clearfix;
     margin-inline: auto;
-    padding: 1.2em 1em; /* Espaçamento mais folgado */
+    padding: 1em 1.5em; /* Aumentámos a margem interna para o texto não bater nos cantos arredondados */
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -52,7 +52,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #000; /* Texto do título a preto */
+  color: #000;
 }
 
 .site-subtitle {
@@ -87,7 +87,6 @@
   list-style-type: none;
   white-space: nowrap;
 
-  /* Estilização Direta dos Links do Menu */
   a {
     color: #000;
     text-transform: uppercase;
@@ -97,7 +96,7 @@
     transition: opacity 0.2s ease;
 
     &:hover {
-      opacity: 0.5; /* Efeito de transparência no hover */
+      opacity: 0.5;
     }
   }
 
@@ -107,7 +106,6 @@
   }
 }
 
-/* Ajustes para os botões do mobile (Menu e Pesquisa) */
 .masthead .search__toggle,
 .masthead .greedy-nav__toggle {
   color: #000;
