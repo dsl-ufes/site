@@ -16,7 +16,7 @@ layout: archive
       
       {% if post.header.teaser %}
       <div style="flex: 1 1 200px; max-width: 240px;">
-        <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" style="width: 100%; object-fit: cover; border: 1px solid #000; filter: grayscale(100%);">
+        <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" style="width: 100%; object-fit: cover; border: 1px solid #000;">
       </div>
       {% endif %}
       
