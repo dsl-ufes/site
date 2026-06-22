@@ -1,29 +1,36 @@
 .masthead {
   position: relative;
-  background-color: #fff !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 20;
   
-  /* O Segredo da Barra Flutuante */
-  border: 1px solid #000 !important; /* Borda contornando tudo */
-  border-radius: 12px !important; /* Cantos arredondados modernos */
-  margin: 1.5em auto !important; /* Descola do topo e das bordas */
-  width: 92% !important; /* Mantém um respiro lateral nos telemóveis */
-  max-width: 1200px !important; /* Largura máxima em ecrãs grandes */
-  box-shadow: none !important; /* Remove qualquer sombra reta do tema */
-
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
-  z-index: 20;
 
+  /* Aplicar a flutuacao e as bordas curvas apenas no contentor interior */
   &__inner-wrap {
     @include clearfix;
-    margin: 0 auto;
-    padding: 1em 1.5em; /* Respiro interno para o texto não colar nas bordas */
-    max-width: 100%;
+    
+    background-color: #fff !important;
+    border: 1px solid #000 !important;
+    border-radius: 12px !important;
+    
+    /* Geometria flutuante garantida para todos */
+    margin: 1.5em auto !important;
+    width: 92% !important;
+    max-width: 1200px !important;
+    padding: 1em 1.5em !important;
+    box-shadow: none !important;
+    
+    /* Flexbox para alinhar logotipo e menu */
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centraliza a logo e o texto verticalmente */
+    align-items: center;
     font-family: $sans-serif-narrow;
 
     nav {
@@ -34,6 +41,11 @@
       text-decoration: none;
     }
   }
+}
+
+/* Limpar fundos fantasmas que vem nativamente da classe greedy-nav */
+.greedy-nav {
+  background: transparent !important;
 }
 
 .site-logo img {
