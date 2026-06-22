@@ -3,7 +3,6 @@ title: "Equipe"
 permalink: /equipe/
 layout: archive
 ---
-<!-- Removendo o título colocado automaticamente pelo Jekyll -->
 <style>
   .page__title { display: none !important; }
 </style>
@@ -33,8 +32,11 @@ layout: archive
       </div>
 
       {% if member.email %}
-      <div style="margin-top: auto;">
-        <a href="mailto:{{ member.email }}" style="display: inline-block; padding: 0.5em 1.2em; border: 1px solid #000; color: #000; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.75em; letter-spacing: 0.5px; transition: background-color 0.2s ease, color 0.2s ease;" onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#000';">Contato</a>
+      <div style="margin-top: auto; padding-top: 0.5em;">
+        <a href="mailto:{{ member.email }}" style="display: flex; align-items: center; color: #000; text-decoration: none; font-size: 0.85em; word-break: break-all; transition: opacity 0.2s ease;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          {{ member.email }}
+        </a>
       </div>
       {% endif %}
     </div>
@@ -63,8 +65,11 @@ layout: archive
       </div>
 
       {% if member.email %}
-      <div style="margin-top: auto;">
-        <a href="mailto:{{ member.email }}" style="display: inline-block; padding: 0.5em 1.2em; border: 1px solid #000; color: #000; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.75em; letter-spacing: 0.5px; transition: background-color 0.2s ease, color 0.2s ease;" onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#000';">Contato</a>
+      <div style="margin-top: auto; padding-top: 0.5em;">
+        <a href="mailto:{{ member.email }}" style="display: flex; align-items: center; color: #000; text-decoration: none; font-size: 0.85em; word-break: break-all; transition: opacity 0.2s ease;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; flex-shrink: 0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          {{ member.email }}
+        </a>
       </div>
       {% endif %}
     </div>
