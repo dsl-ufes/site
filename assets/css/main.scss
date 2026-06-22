@@ -7,3 +7,53 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Contentor principal da Barra de Navegação */
+.masthead {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #000000 !important; /* Linha fina preta inferior */
+  box-shadow: none !important; /* Remove qualquer sombra padrão do tema */
+  padding: 1.2em 0 !important; /* Ajuste sutil de espaçamento vertical */
+}
+
+/* Título do Site / Nome do Laboratório (Lado Esquerdo) */
+.masthead__menu-item.masthead__menu-item--lg,
+.masthead__menu-item--lg a {
+  color: #000000 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  font-weight: bold !important;
+  font-size: 1.15em !important;
+  text-decoration: none !important;
+}
+
+/* Links de Navegação (Lado Direito) */
+.masthead__menu-items .masthead__menu-item a {
+  color: #000000 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-size: 0.8em !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+/* Efeito de passar o rato (Hover) nos links */
+.masthead__menu-items .masthead__menu-item a:hover {
+  opacity: 0.5 !important; /* Efeito discreto de transparência */
+  text-decoration: none !important;
+}
+
+/* Ajuste para o botão do menu responsivo em dispositivos móveis */
+.masthead__toggle {
+  color: #000000 !important;
+  background-color: transparent !important;
+  border: 1px solid #000000 !important;
+  border-radius: 0 !important; /* Cantos perfeitamente retos */
+}
+
+.masthead__toggle:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
