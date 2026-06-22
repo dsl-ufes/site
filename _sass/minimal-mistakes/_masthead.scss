@@ -4,7 +4,8 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid #000; /* Linha preta fina */
+  background-color: #fff; /* Fundo branco garantido */
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -14,7 +15,7 @@
   &__inner-wrap {
     @include clearfix;
     margin-inline: auto;
-    padding: 1em;
+    padding: 1.2em 1em; /* Espaçamento mais folgado */
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -49,7 +50,9 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
-  // z-index: 20;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000; /* Texto do título a preto */
 }
 
 .site-subtitle {
@@ -84,8 +87,34 @@
   list-style-type: none;
   white-space: nowrap;
 
+  /* Estilização Direta dos Links do Menu */
+  a {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.5; /* Efeito de transparência no hover */
+    }
+  }
+
   &--lg {
     padding-inline-end: 2em;
     font-weight: 700;
+  }
+}
+
+/* Ajustes para os botões do mobile (Menu e Pesquisa) */
+.masthead .search__toggle,
+.masthead .greedy-nav__toggle {
+  color: #000;
+  background-color: transparent;
+  border: none;
+  
+  &:hover {
+    opacity: 0.5;
   }
 }
