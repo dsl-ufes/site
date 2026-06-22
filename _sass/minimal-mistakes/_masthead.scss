@@ -1,11 +1,8 @@
 .masthead {
   position: relative;
-  border: 1px solid #000; /* Borda fina contornando toda a barra */
-  border-radius: 12px; /* O arredondamento moderno dos cantos */
-  background-color: #fff;
-  margin: 1.5em auto; /* Descola a barra do topo da página e centraliza */
-  max-width: 1200px; /* Define o tamanho máximo para parecer um "cartão" */
-  width: 92%; /* Garante que há espaço vazio nas laterais em telemóveis */
+  border-bottom: none !important; /* Remove explicitamente a linha reta do tema */
+  background-color: transparent; /* Garante que o bloco exterior é invisível */
+  padding: 1.5em 1em; /* Espaço para afastar a barra do topo e das laterais */
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -14,9 +11,15 @@
 
   &__inner-wrap {
     @include clearfix;
-    margin-inline: auto;
-    padding: 1em 1.5em; /* Aumentámos a margem interna para o texto não bater nos cantos arredondados */
-    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em 1.5em;
+    max-width: 1200px;
+    
+    /* Aplicação do design flutuante apenas no contentor interno */
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 12px; 
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
