@@ -3,6 +3,10 @@ title: "Equipe"
 permalink: /equipe/
 layout: archive
 ---
+<!-- Removendo o título colocado automaticamente pelo Jekyll -->
+<style>
+  .page__title { display: none !important; }
+</style>
 
 <h1 style="text-transform: uppercase; font-size: 1.6em; letter-spacing: 2px; color: #000; margin-top: 0; margin-bottom: 1em; border-bottom: 2px solid #000; padding-bottom: 10px;">Equipe</h1>
 
