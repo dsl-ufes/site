@@ -1,37 +1,32 @@
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
 .masthead {
   position: relative;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  z-index: 20;
-  
+  border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
+  z-index: 20;
 
-  /* Aplicar a flutuacao e as bordas curvas apenas no contentor interior */
   &__inner-wrap {
     @include clearfix;
-    
-    background-color: #fff !important;
-    border: 1px solid #000 !important;
-    border-radius: 12px !important;
-    
-    /* Geometria flutuante garantida para todos */
-    margin: 1.5em auto !important;
-    width: 92% !important;
-    max-width: 1200px !important;
-    padding: 1em 1.5em !important;
-    box-shadow: none !important;
-    
-    /* Flexbox para alinhar logotipo e menu */
+    margin-inline: auto;
+    padding: 1em;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    align-items: center;
     font-family: $sans-serif-narrow;
+
+    @include breakpoint($x-large) {
+      max-width: $max-width;
+    }
 
     nav {
       z-index: 10;
@@ -43,22 +38,18 @@
   }
 }
 
-/* Limpar fundos fantasmas que vem nativamente da classe greedy-nav */
-.greedy-nav {
-  background: transparent !important;
-}
-
 .site-logo img {
   max-height: 2rem;
 }
 
 .site-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #000;
+  // z-index: 20;
 }
 
 .site-subtitle {
@@ -93,32 +84,8 @@
   list-style-type: none;
   white-space: nowrap;
 
-  a {
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85em;
-    font-weight: bold;
-    transition: opacity 0.2s ease;
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
   &--lg {
     padding-inline-end: 2em;
     font-weight: 700;
-  }
-}
-
-.masthead .search__toggle,
-.masthead .greedy-nav__toggle {
-  color: #000;
-  background-color: transparent;
-  border: none;
-  
-  &:hover {
-    opacity: 0.5;
   }
 }
